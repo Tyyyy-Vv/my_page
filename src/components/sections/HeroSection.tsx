@@ -45,7 +45,7 @@ const HeroSection = () => {
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
                     >
-                        BRIDGE ENGINEER
+                        BRIDGE ENGINEERING UNDERGRADUATE
                     </motion.h2>
                 </div>
 

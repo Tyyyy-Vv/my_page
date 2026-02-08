@@ -15,11 +15,11 @@ export const theme = {
       900: '#1A237E',
     },
 
-    // 辅助色：建筑金（代表工程、品质）
+    // 辅助色：工程青 (Cyan)
     accent: {
-      light: '#FFD54F',
-      main: '#FFC107', // 金色强调
-      dark: '#FFA000',
+      light: '#A7FFEB',
+      main: '#64FFDA', // 青色强调
+      dark: '#1DE9B6',
     },
 
     // 中性色：极简灰度
@@ -43,7 +43,7 @@ export const theme = {
     gradients: {
       hero: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
       card: 'linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)',
-      stress: 'linear-gradient(90deg, #2196F3 0%, #00BCD4 50%, #FFC107 75%, #F44336 100%)',
+      stress: 'linear-gradient(90deg, #2196F3 0%, #00BCD4 50%, #64FFDA 75%, #F44336 100%)',
       radial: 'radial-gradient(circle at 50% 50%, rgba(63, 81, 181, 0.15) 0%, transparent 70%)',
     }
   },

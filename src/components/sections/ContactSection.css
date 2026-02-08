@@ -1,16 +1,31 @@
 /* Contact Section Styles - Structural */
 .contact-section {
   position: relative;
-  background-color: #0F1329;
+  background-color: #0A0E27; /* Unified background */
   min-height: 50vh;
   display: flex;
   align-items: center;
   border-top: 1px solid rgba(255,255,255,0.05);
+  overflow: hidden;
+}
+
+.contact-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: 0;
+    pointer-events: none;
 }
 
 .contact-content {
   max-width: 900px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .contact-intro {

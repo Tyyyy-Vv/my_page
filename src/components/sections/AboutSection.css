@@ -58,7 +58,7 @@
 .title-line {
     width: 60px;
     height: 4px;
-    background-color: #FFC107;
+    background-color: #64FFDA;
 }
 
 /* Right Column */
@@ -142,7 +142,7 @@
 
 .skill-item:hover {
     background: rgba(63, 81, 181, 0.2);
-    border-color: #3F51B5;
+    border-color: #64FFDA;
     color: #fff;
 }
 

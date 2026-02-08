@@ -97,10 +97,10 @@ const BridgeModel = () => {
               >
                 <cylinderGeometry args={[0.03, 0.03, cableLength, 6]} />
                 <meshStandardMaterial
-                  color="#FFC107"
+                  color="#64FFDA"
                   metalness={0.9}
                   roughness={0.1}
-                  emissive="#FFC107"
+                  emissive="#64FFDA"
                   emissiveIntensity={0.3}
                 />
               </mesh>

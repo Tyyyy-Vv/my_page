@@ -79,15 +79,15 @@
 .nav-link-en {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.7rem;
-  color: #FFC107;
+  color: #64FFDA;
   opacity: 0;
-  transform: translateX(-10px);
+  transform: translateY(5px);
   transition: all 0.3s ease;
 }
 
 .nav-link:hover .nav-link-en {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
 .nav-link::after {
@@ -97,7 +97,7 @@
   left: 0;
   width: 0;
   height: 1px;
-  background: #FFC107;
+  background: #64FFDA;
   transition: width 0.3s ease;
 }
 
@@ -182,7 +182,7 @@
 
 .nav-mobile-link:hover {
   background: rgba(63, 81, 181, 0.1);
-  color: #FFC107;
+  color: #64FFDA;
   padding-left: 2.5rem;
 }
 

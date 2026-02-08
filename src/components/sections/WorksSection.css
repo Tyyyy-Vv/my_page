@@ -3,6 +3,19 @@
   position: relative;
   background-color: #0A0E27;
   padding: 100px 0;
+  overflow: hidden;
+}
+
+.works-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: 0;
+    pointer-events: none;
 }
 
 .works-grid {
@@ -10,20 +23,23 @@
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 2rem;
   margin-top: 3rem;
+  position: relative;
+  z-index: 1;
 }
 
 .work-card {
   position: relative;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(10, 14, 39, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 0; /* Square corners for structural feel */
   overflow: hidden;
   transition: all 0.3s ease;
   cursor: pointer;
+  backdrop-filter: blur(5px);
 }
 
 .work-card:hover {
-  border-color: #FFC107;
+  border-color: #64FFDA;
   transform: translateY(-5px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
@@ -94,10 +110,10 @@
     z-index: 10;
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.7rem;
-    color: #FFC107;
+    color: #64FFDA;
     background: rgba(0,0,0,0.7);
     padding: 0.2rem 0.5rem;
-    border: 1px solid #FFC107;
+    border: 1px solid #64FFDA;
     opacity: 0.8;
 }
 
@@ -158,7 +174,7 @@
 
 .spec-value {
   font-size: 0.9375rem;
-  color: #FFC107;
+  color: #64FFDA;
   font-weight: 600;
   font-family: 'JetBrains Mono', monospace;
 }
@@ -183,9 +199,9 @@
   width: 100%;
   padding: 0.875rem;
   background: transparent;
-  border: 2px solid rgba(255, 193, 7, 0.3);
+  border: 2px solid rgba(100, 255, 218, 0.3);
   border-radius: 0.5rem;
-  color: #FFC107;
+  color: #64FFDA;
   font-size: 0.9375rem;
   font-weight: 600;
   cursor: pointer;
@@ -197,8 +213,8 @@
 }
 
 .work-view-btn:hover {
-  background: rgba(255, 193, 7, 0.1);
-  border-color: #FFC107;
+  background: rgba(100, 255, 218, 0.1);
+  border-color: #64FFDA;
   transform: translateX(4px);
 }
 

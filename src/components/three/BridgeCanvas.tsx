@@ -27,7 +27,7 @@ const BridgeCanvas = () => {
           shadow-mapSize-height={2048}
         />
         <pointLight position={[-10, -10, -10]} intensity={0.3} color="#3F51B5" />
-        <pointLight position={[10, -10, 10]} intensity={0.3} color="#FFC107" />
+        <pointLight position={[10, -10, 10]} intensity={0.3} color="#64FFDA" />
 
         {/* Scene */}
         <BridgeModel />
