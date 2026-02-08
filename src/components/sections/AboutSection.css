@@ -155,11 +155,15 @@
     
     .about-left {
         position: relative;
-        margin-bottom: 20px;
+        margin-bottom: 80px;
     }
 }
 
 @media (max-width: 768px) {
+    .about-left {
+        margin-bottom: 100px;
+    }
+    
     .stats-block {
         grid-template-columns: 1fr;
     }
