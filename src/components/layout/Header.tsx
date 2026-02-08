@@ -17,9 +17,9 @@ const Header = () => {
   }, [])
 
   const navItems = [
-    { label: '关于', href: '#about', labelEn: 'About' },
-    { label: '作品', href: '#works', labelEn: 'Works' },
-    { label: '联系', href: '#contact', labelEn: 'Contact' },
+    { label: 'ABOUT', href: '#about', labelEn: '// 01' },
+    { label: 'WORKS', href: '#works', labelEn: '// 02' },
+    { label: 'CONTACT', href: '#contact', labelEn: '// 03' },
   ]
 
   const scrollToSection = (href: string) => {

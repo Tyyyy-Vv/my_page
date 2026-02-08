@@ -28,7 +28,9 @@ const ContactSection = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <p className="contact-intro">
-            如果您对我的作品感兴趣，或有任何合作意向，欢迎与我联系。
+            // OPEN FOR COLLABORATION
+            <br />
+            欢迎就桥梁工程、结构设计或技术交流与我联系。
           </p>
 
           <div className="contact-methods">

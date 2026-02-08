@@ -1,27 +1,26 @@
-/* Header Styles */
+/* Header Styles - Structural Command Bar */
 .header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1200;
-  padding: 1.5rem 0;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 1rem 0;
+  transition: all 0.3s ease;
+  background: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .header.scrolled {
-  background: rgba(26, 31, 58, 0.85);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: #0A0E27; /* Solid background for engineering readibility */
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 1rem 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 0.8rem 0;
 }
 
 .header-container {
-  max-width: 1200px;
+  max-width: 1400px; /* Aligned with other containers */
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,70 +29,76 @@
 /* Logo */
 .logo {
   display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
+  align-items: center;
+  gap: 1rem;
   text-decoration: none;
   color: white;
-  font-family: 'Orbitron', 'Noto Sans SC', sans-serif;
-  cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 
 .logo-zh {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-family: 'Noto Sans SC', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 900;
   letter-spacing: 0.05em;
 }
 
 .logo-en {
+  font-family: 'JetBrains Mono', monospace;
   font-size: 0.75rem;
-  color: #B0B8D4;
-  letter-spacing: 0.15em;
-  font-weight: 400;
+  color: #6B7494;
+  letter-spacing: 0.1em;
+  padding-left: 1rem;
+  border-left: 1px solid rgba(255,255,255,0.2);
 }
 
 /* Desktop Navigation */
 .nav-desktop {
   display: flex;
-  gap: 3rem;
+  gap: 4rem;
   align-items: center;
 }
 
 .nav-link {
   position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.125rem;
-  color: white;
+  align-items: baseline;
+  gap: 0.5rem;
+  color: #B0B8D4;
   text-decoration: none;
-  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
   font-weight: 500;
-  transition: color 0.3s ease;
-  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #FFC107;
+  color: #fff;
 }
 
 .nav-link-en {
-  font-size: 0.625rem;
-  color: #6B7494;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  font-family: 'Inter', sans-serif;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: #FFC107;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover .nav-link-en {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .nav-link::after {
   content: '';
   position: absolute;
-  bottom: -0.5rem;
+  bottom: -4px;
   left: 0;
   width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #FFC107, #3F51B5);
-  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 1px;
+  background: #FFC107;
+  transition: width 0.3s ease;
 }
 
 .nav-link:hover::after {
