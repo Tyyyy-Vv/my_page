@@ -6,8 +6,10 @@ import './HeroSection.css'
 const HeroSection = () => {
   return (
     <section id="hero" className="hero-section">
+      <div className="hero-grid-overlay" />
+      
       <div className="hero-container">
-        {/* 3D Bridge Model */}
+        {/* 3D Bridge Model (Background) */}
         <div className="hero-background">
           <BridgeCanvas />
         </div>
@@ -15,24 +17,37 @@ const HeroSection = () => {
         {/* Content */}
         <motion.div
           className="hero-content"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
         >
+          <div className="hero-status-bar">
+             <span className="status-item">SYSTEM: ONLINE</span>
+             <span className="status-item">LOC: GUANGZHOU</span>
+             <span className="status-item blinking">_</span>
+          </div>
+
           <motion.h1
             className="hero-title"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.4 }}
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
           >
-            {profile.name.zh}
+            <span className="glitch-text" data-text={profile.name.zh}>{profile.name.zh}</span>
           </motion.h1>
+
+          <motion.div 
+            className="hero-divider"
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          />
 
           <motion.p
             className="hero-subtitle"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
           >
             {profile.slogan.zh}
           </motion.p>
@@ -41,36 +56,36 @@ const HeroSection = () => {
             className="hero-info"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <span>{profile.university.zh}</span>
-            <span className="separator">·</span>
-            <span>{profile.major.zh}</span>
-            <span className="separator">·</span>
-            <span>{profile.grade}</span>
+            <span className="info-tag">{profile.university.zh}</span>
+            <span className="info-tag">{profile.major.zh}</span>
+            <span className="info-tag">{profile.grade}</span>
           </motion.div>
 
           <motion.div
             className="hero-cta"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
           >
             <button
-              className="cta-button primary"
+              className="tech-button primary"
               onClick={() => {
                 document.querySelector('#works')?.scrollIntoView({ behavior: 'smooth' })
               }}
             >
-              查看作品
+              <span className="btn-content">查看作品 // WORKS</span>
+              <span className="btn-corner top-left"></span>
+              <span className="btn-corner bottom-right"></span>
             </button>
             <button
-              className="cta-button secondary"
+              className="tech-button secondary"
               onClick={() => {
                 document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' })
               }}
             >
-              了解更多
+               <span className="btn-content">了解更多 // MORE</span>
             </button>
           </motion.div>
         </motion.div>
@@ -81,10 +96,8 @@ const HeroSection = () => {
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 2 }}
         >
-          <span>滚动探索</span>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M12 5v14M19 12l-7 7-7-7" stroke="currentColor" strokeWidth="2" />
-          </svg>
+          <span className="scroll-text">SCROLL_DOWN</span>
+          <div className="scroll-line"></div>
         </motion.div>
       </div>
     </section>
