@@ -54,36 +54,4 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-  deploy-netlify:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout代码
-        uses: actions/checkout@v4
 
-      - name: 下载构建产物
-        uses: actions/download-artifact@v3
-        with:
-          name: github-pages
-          path: page-build-artifact
-
-      - name: 解压构建产物
-        run: |
-          tar -xf page-build-artifact/artifact.tar -C .
-          mv artifact dist || true
-
-      - name: 部署到Netlify
-        if: ${{ env.NETLIFY_AUTH_TOKEN != '' }}
-        uses: nwtgck/actions-netlify@v3.0
-        with:
-          publish-dir: './dist'
-          production-deploy: true
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          deploy-message: "Deploy from GitHub Actions"
-          enable-pull-request-comment: false
-          enable-commit-comment: true
-          overwrites-pull-request-comment: false
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        timeout-minutes: 5
