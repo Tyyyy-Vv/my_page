@@ -1,30 +1,31 @@
-/* Works Section Styles */
+/* Works Section Styles - Structural */
 .works-section {
   position: relative;
-  background: linear-gradient(180deg, #1A1F3A 0%, #0A0E27 100%);
+  background-color: #0A0E27;
+  padding: 100px 0;
 }
 
 .works-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 2.5rem;
+  gap: 2rem;
   margin-top: 3rem;
 }
 
 .work-card {
   position: relative;
-  background: rgba(26, 31, 58, 0.6);
+  background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 1rem;
+  border-radius: 0; /* Square corners for structural feel */
   overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .work-card:hover {
-  border-color: rgba(63, 81, 181, 0.5);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3),
-              0 0 30px rgba(63, 81, 181, 0.2);
+  border-color: #FFC107;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .work-image-container {
@@ -80,15 +81,20 @@
 }
 
 .work-title {
-  font-size: 1.5rem;
+  font-family: 'Noto Sans SC', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
   margin-bottom: 0.25rem;
   color: #ffffff;
 }
 
 .work-title-en {
-  font-size: 0.875rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
   color: #6B7494;
   letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .work-description {

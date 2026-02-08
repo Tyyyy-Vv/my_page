@@ -6,98 +6,108 @@ import './HeroSection.css'
 const HeroSection = () => {
   return (
     <section id="hero" className="hero-section">
-      <div className="hero-grid-overlay" />
+      {/* Structural Grid Overlay - Static & Rigorous */}
+      <div className="structural-grid" />
       
       <div className="hero-container">
-        {/* 3D Bridge Model (Background) */}
+        {/* 3D Bridge Model */}
         <div className="hero-background">
           <BridgeCanvas />
         </div>
 
-        {/* Content */}
-        <motion.div
-          className="hero-content"
+        <motion.div 
+          className="hero-main-layer"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 1.5 }}
         >
-          <div className="hero-status-bar">
-             <span className="status-item">SYSTEM: ONLINE</span>
-             <span className="status-item">LOC: GUANGZHOU</span>
-             <span className="status-item blinking">_</span>
-          </div>
+            <div className="content-frame">
+                {/* Engineering Header */}
+                <div className="eng-header">
+                    <span className="eng-id">NO. 2024-XTY</span>
+                    <div className="eng-line"></div>
+                    <span className="eng-loc">GZ, CHINA</span>
+                </div>
 
-          <motion.h1
-            className="hero-title"
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <span className="glitch-text" data-text={profile.name.zh}>{profile.name.zh}</span>
-          </motion.h1>
+                {/* Main Title - Monumental & Static */}
+                <div className="title-block">
+                    <motion.h1
+                        className="hero-name"
+                        initial={{ y: 30, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 1, ease: "easeOut" }}
+                    >
+                        {profile.name.zh}
+                    </motion.h1>
+                    <motion.h2
+                        className="hero-role"
+                        initial={{ y: 20, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+                    >
+                        BRIDGE ENGINEER
+                    </motion.h2>
+                </div>
 
-          <motion.div 
-            className="hero-divider"
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          />
+                {/* Slogan - Rigorous */}
+                <motion.div 
+                    className="slogan-container"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1, delay: 0.5 }}
+                >
+                    <p className="hero-slogan">{profile.slogan.zh}</p>
+                </motion.div>
 
-          <motion.p
-            className="hero-subtitle"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-          >
-            {profile.slogan.zh}
-          </motion.p>
+                {/* Info Block - Structured Data */}
+                <motion.div 
+                    className="info-structure"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1, delay: 0.8 }}
+                >
+                    <div className="info-column">
+                        <label>AFFILIATION</label>
+                        <span>{profile.university.zh}</span>
+                    </div>
+                    <div className="info-divider"></div>
+                    <div className="info-column">
+                        <label>MAJOR</label>
+                        <span>{profile.major.zh}</span>
+                    </div>
+                </motion.div>
 
-          <motion.div
-            className="hero-info"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            <span className="info-tag">{profile.university.zh}</span>
-            <span className="info-tag">{profile.major.zh}</span>
-            <span className="info-tag">{profile.grade}</span>
-          </motion.div>
-
-          <motion.div
-            className="hero-cta"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-          >
-            <button
-              className="tech-button primary"
-              onClick={() => {
-                document.querySelector('#works')?.scrollIntoView({ behavior: 'smooth' })
-              }}
-            >
-              <span className="btn-content">查看作品 // WORKS</span>
-              <span className="btn-corner top-left"></span>
-              <span className="btn-corner bottom-right"></span>
-            </button>
-            <button
-              className="tech-button secondary"
-              onClick={() => {
-                document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' })
-              }}
-            >
-               <span className="btn-content">了解更多 // MORE</span>
-            </button>
-          </motion.div>
+                {/* CTA Buttons - Heavy & Solid */}
+                <motion.div 
+                    className="cta-group"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 1 }}
+                >
+                    <button 
+                        className="btn-structural primary"
+                        onClick={() => document.querySelector('#works')?.scrollIntoView({ behavior: 'smooth' })}
+                    >
+                        查看作品
+                    </button>
+                    <button 
+                        className="btn-structural secondary"
+                        onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+                    >
+                        联系我
+                    </button>
+                </motion.div>
+            </div>
         </motion.div>
 
-        {/* Scroll Indicator */}
-        <motion.div
-          className="scroll-indicator"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 2 }}
+        {/* Scroll - Static Line */}
+        <motion.div 
+            className="scroll-mark"
+            initial={{ height: 0 }}
+            animate={{ height: 60 }}
+            transition={{ duration: 1, delay: 1.2 }}
         >
-          <span className="scroll-text">SCROLL_DOWN</span>
-          <div className="scroll-line"></div>
+            <span className="scroll-label">SCROLL</span>
         </motion.div>
       </div>
     </section>

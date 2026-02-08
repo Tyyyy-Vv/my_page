@@ -1,249 +1,245 @@
-/* Hero Section Styles - Technical/Architectural */
+/* Hero Section - Rigorous Engineering Style */
+
 .hero-section {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  background: #0A0E27; /* Fallback */
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0A0E27;
+    overflow: hidden;
+    color: #ffffff;
 }
 
-.hero-grid-overlay {
+/* Background Grid - Like engineering graph paper, very subtle */
+.structural-grid {
     position: absolute;
     inset: 0;
     background-image: 
-        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-    background-size: 100px 100px;
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: 2;
     pointer-events: none;
-    z-index: 5;
-    mask-image: radial-gradient(circle at center, transparent 20%, black 100%);
 }
 
 .hero-container {
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  position: relative;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    max-width: 1600px;
+    margin: 0 auto;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-}
-
-.hero-content {
-  text-align: center;
-  position: relative;
-  z-index: 20;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  backdrop-filter: blur(2px); /* Slight blur to improve text legibility over 3D */
-}
-
-/* Status Bar */
-.hero-status-bar {
-    display: flex;
-    gap: 2rem;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.75rem;
-    color: #6B7494;
-    margin-bottom: 2rem;
-    letter-spacing: 0.1em;
-}
-
-.blinking {
-    animation: blink 1s infinite;
-}
-
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-}
-
-/* Title */
-.hero-title {
-  font-family: 'Orbitron', sans-serif;
-  font-size: clamp(4rem, 10vw, 8rem);
-  font-weight: 900;
-  color: #fff;
-  line-height: 1;
-  margin: 0;
-  position: relative;
-}
-
-.glitch-text {
-    position: relative;
-}
-
-.glitch-text::before,
-.glitch-text::after {
-    content: attr(data-text);
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
+    z-index: 1;
+}
+
+.hero-main-layer {
+    position: relative;
+    z-index: 20;
     width: 100%;
-    height: 100%;
-    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+    padding: 0 2rem;
 }
 
-.glitch-text::before {
-    color: #0ff;
-    z-index: -1;
-    transform: translate(-2px, 0);
-    clip-path: inset(0 0 0 0);
-    animation: glitch-anim-1 4s infinite linear alternate-reverse;
-}
-
-.glitch-text::after {
-    color: #f0f;
-    z-index: -2;
-    transform: translate(2px, 0);
-    clip-path: inset(0 0 0 0);
-    animation: glitch-anim-2 4s infinite linear alternate-reverse;
-}
-
-@keyframes glitch-anim-1 {
-    0% { clip-path: inset(20% 0 80% 0); }
-    20% { clip-path: inset(60% 0 10% 0); }
-    40% { clip-path: inset(40% 0 50% 0); }
-    60% { clip-path: inset(80% 0 5% 0); }
-    80% { clip-path: inset(10% 0 60% 0); }
-    100% { clip-path: inset(30% 0 20% 0); }
-}
-
-@keyframes glitch-anim-2 {
-    0% { clip-path: inset(10% 0 60% 0); }
-    20% { clip-path: inset(30% 0 20% 0); }
-    40% { clip-path: inset(50% 0 40% 0); }
-    60% { clip-path: inset(20% 0 80% 0); }
-    80% { clip-path: inset(80% 0 10% 0); }
-    100% { clip-path: inset(40% 0 50% 0); }
-}
-
-
-.hero-divider {
-    height: 2px;
-    width: 100px;
-    background: #FFC107;
-    margin: 1.5rem 0;
-}
-
-.hero-subtitle {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  color: #B0B8D4;
-  margin-bottom: 2rem;
-  font-weight: 300;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-
-.hero-info {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 3rem;
-}
-
-.info-tag {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.9rem;
-    color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 0.5rem 1rem;
-    background: rgba(255, 255, 255, 0.05);
-}
-
-/* CTA Buttons */
-.hero-cta {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.tech-button {
-    position: relative;
-    background: transparent;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    font-family: 'JetBrains Mono', monospace;
-}
-
-.tech-button .btn-content {
-    display: block;
-    padding: 1rem 2rem;
-    font-size: 0.9rem;
-    font-weight: 700;
-    transition: all 0.3s;
-}
-
-.tech-button.primary .btn-content {
-    background: #FFC107;
-    color: #0A0E27;
-    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
-}
-
-.tech-button.primary:hover .btn-content {
-    background: #fff;
-    transform: translateY(-2px);
-}
-
-.tech-button.secondary .btn-content {
-    border: 1px solid #FFC107;
-    color: #FFC107;
-    background: transparent;
-}
-
-.tech-button.secondary:hover .btn-content {
-    background: rgba(255, 193, 7, 0.1);
-}
-
-.btn-corner {
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    background: #fff;
-    z-index: 2;
-}
-
-.top-left { top: -3px; left: -3px; }
-.bottom-right { bottom: -3px; right: -3px; }
-
-/* Scroll Indicator */
-.scroll-indicator {
-    position: absolute;
-    bottom: 2rem;
+.content-frame {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    z-index: 20;
+    text-align: center;
+    background: rgba(10, 14, 39, 0.2); /* Very subtle tint */
+    backdrop-filter: blur(2px);
+    padding: 4rem;
+    border: 1px solid rgba(255,255,255,0.05);
+    /* Heavy top/bottom borders mimicking a beam */
+    border-top: 4px solid #fff; 
+    border-bottom: 4px solid #fff;
+    max-width: 800px;
 }
 
-.scroll-text {
-    font-family: 'JetBrains Mono', 'Orbitron', monospace;
+/* Engineering Header */
+.eng-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    color: #6B7494;
+    letter-spacing: 0.1em;
+    width: 100%;
+}
+
+.eng-line {
+    flex: 1;
+    height: 1px;
+    background-color: rgba(255,255,255,0.2);
+}
+
+/* Main Title */
+.title-block {
+    margin-bottom: 2.5rem;
+}
+
+.hero-name {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 900; /* Extra Bold */
+    font-size: clamp(3.5rem, 8vw, 6rem);
+    line-height: 1.1;
+    color: #FFFFFF;
+    letter-spacing: 0.05em;
+    margin: 0;
+    text-transform: uppercase;
+    /* Static, heavy feel. No gradient. */
+}
+
+.hero-role {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: #FFC107; /* Industrial Yellow */
+    margin: 0.5rem 0 0 0;
+    letter-spacing: 0.4em;
+    opacity: 0.9;
+}
+
+/* Slogan */
+.slogan-container {
+    margin-bottom: 3rem;
+    max-width: 600px;
+}
+
+.hero-slogan {
+    font-family: 'Noto Sans SC', serif; /* Maybe serif allows for more elegance? Or keep Sans for structure. Let's use Sans for now. */
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: #B0B8D4;
+    line-height: 1.8;
+    letter-spacing: 0.1em;
+}
+
+/* Info Structure */
+.info-structure {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3.5rem;
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 1.5rem 2.5rem;
+    background: rgba(255,255,255,0.02);
+}
+
+.info-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.info-column label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: #6B7494;
+    letter-spacing: 0.1em;
+}
+
+.info-column span {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.info-divider {
+    width: 1px;
+    height: 30px;
+    background-color: rgba(255,255,255,0.2);
+}
+
+/* Buttons */
+.cta-group {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.btn-structural {
+    padding: 1rem 2.5rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    border: 2px solid;
+}
+
+.btn-structural.primary {
+    background-color: #fff;
+    border-color: #fff;
+    color: #0A0E27;
+}
+
+.btn-structural.primary:hover {
+    background-color: #E0E0E0;
+    border-color: #E0E0E0;
+}
+
+.btn-structural.secondary {
+    background-color: transparent;
+    border-color: #fff;
+    color: #fff;
+}
+
+.btn-structural.secondary:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+/* Scroll Mark */
+.scroll-mark {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background-color: rgba(255,255,255,0.3);
+    z-index: 20;
+    transform: translateX(-50%);
+}
+
+.scroll-label {
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'JetBrains Mono', monospace;
     font-size: 0.7rem;
     color: #6B7494;
     letter-spacing: 0.2em;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
 }
 
-.scroll-line {
-    width: 1px;
-    height: 60px;
-    background: linear-gradient(to bottom, #FFC107, transparent);
+@media (max-width: 768px) {
+    .content-frame {
+        padding: 2rem;
+        border-width: 2px;
+    }
+    
+    .info-structure {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+    }
+    
+    .info-divider {
+        width: 30px;
+        height: 1px;
+    }
 }
