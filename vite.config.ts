@@ -1,3 +1,4 @@
+/// <reference types="node" />
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import glsl from 'vite-plugin-glsl'
@@ -10,8 +11,8 @@ export default defineConfig({
     // glsl(), // 暂时禁用以排查问题
   ],
 
-  // Use relative asset paths so it works on GitHub Pages subpaths and Netlify root.
-  base: './',
+  // GitHub Pages project site base path
+  base: '/my_page/',
 
   build: {
     // 生成source map用于调试
