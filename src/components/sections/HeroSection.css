@@ -34,6 +34,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 80px; /* Prevent overlap with fixed header */
 }
 
 .hero-background {
