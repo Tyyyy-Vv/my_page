@@ -34,9 +34,6 @@ jobs:
 
       - name: 构建项目
         run: npm run build
-        env:
-          # 根据你的仓库名调整base路径
-          VITE_BASE_URL: /personal_home_page/
 
       - name: 上传构建产物
         uses: actions/upload-pages-artifact@v3

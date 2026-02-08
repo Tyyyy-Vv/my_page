@@ -11,7 +11,8 @@ export default defineConfig({
   ],
 
   // GitHub Pages子路径（根据仓库名调整）
-  base: process.env.VITE_BASE_URL || '/',
+  // 在GitHub Actions中自动使用子路径，本地和Netlify使用根路径
+  base: process.env.GITHUB_ACTIONS === 'true' ? '/personal_home_page/' : '/',
 
   build: {
     // 生成source map用于调试
