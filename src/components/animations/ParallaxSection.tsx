@@ -29,7 +29,7 @@ const ParallaxSection = ({
   )
 
   return (
-    <div ref={ref} className={className}>
+    <div ref={ref} className={className} style={{ position: 'relative' }}>
       <motion.div style={{ y }}>
         {children}
       </motion.div>

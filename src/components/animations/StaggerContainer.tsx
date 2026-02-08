@@ -15,6 +15,7 @@ const StaggerContainer = ({
   return (
     <motion.div
       className={className}
+      style={{ position: 'relative' }}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: '-100px' }}

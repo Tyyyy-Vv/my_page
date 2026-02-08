@@ -29,6 +29,7 @@ const WorksSection = () => {
     <section id="works" className="works-section section" ref={ref}>
       <div className="container">
         <motion.div
+          style={{ position: 'relative' }}
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}

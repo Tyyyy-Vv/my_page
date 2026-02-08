@@ -52,6 +52,7 @@ const HeroSection = () => {
                 {/* Slogan - Rigorous */}
                 <motion.div 
                     className="slogan-container"
+                    style={{ position: 'relative' }}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 0.5 }}
@@ -62,6 +63,7 @@ const HeroSection = () => {
                 {/* Info Block - Structured Data */}
                 <motion.div 
                     className="info-structure"
+                    style={{ position: 'relative' }}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 0.8 }}
@@ -80,6 +82,7 @@ const HeroSection = () => {
                 {/* CTA Buttons - Heavy & Solid */}
                 <motion.div 
                     className="cta-group"
+                    style={{ position: 'relative' }}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 1 }}

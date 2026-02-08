@@ -13,6 +13,7 @@ const ContactSection = () => {
     <section id="contact" className="contact-section section" ref={ref}>
       <div className="container">
         <motion.div
+          style={{ position: 'relative' }}
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
@@ -23,6 +24,7 @@ const ContactSection = () => {
 
         <motion.div
           className="contact-content"
+          style={{ position: 'relative' }}
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}

@@ -34,6 +34,7 @@ const FadeInSection = ({
     <motion.div
       ref={ref}
       className={className}
+      style={{ position: 'relative' }}
       initial={{
         opacity: 0,
         ...directionOffset[direction]

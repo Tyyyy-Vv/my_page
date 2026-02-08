@@ -24,6 +24,7 @@ const AboutSection = () => {
         <div className="about-left">
             <motion.div 
                 className="section-idx"
+                style={{ position: 'relative' }}
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
@@ -32,6 +33,7 @@ const AboutSection = () => {
             </motion.div>
             <motion.h2 
                 className="about-title"
+                style={{ position: 'relative' }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
@@ -72,7 +74,7 @@ const AboutSection = () => {
             <div className="content-block skills-block">
                 <h3 className="block-label">TECHNICAL COMPETENCE</h3>
                 <div className="skills-grid">
-                    {profile.skills.map((skill, i) => (
+                    {profile.skills.map((skill) => (
                         <div key={skill} className="skill-item">
                             {skill}
                         </div>

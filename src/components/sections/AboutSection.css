@@ -154,7 +154,7 @@
     }
     
     .about-left {
-        position: static;
+        position: relative;
         margin-bottom: 20px;
     }
 }

@@ -12,6 +12,7 @@ const WorkCard = ({ work, index, onClick }: WorkCardProps) => {
   return (
     <motion.article
       className="work-card"
+      style={{ position: 'relative' }}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}
