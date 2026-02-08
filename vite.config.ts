@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import react from '@vitejs/plugin-react-swc'
 import glsl from 'vite-plugin-glsl'
 import path from 'path'
 
@@ -7,7 +7,7 @@ import path from 'path'
 export default defineConfig({
   plugins: [
     react(),
-    glsl(), // 支持导入GLSL着色器文件
+    // glsl(), // 暂时禁用以排查问题
   ],
 
   // GitHub Pages子路径（根据仓库名调整）
