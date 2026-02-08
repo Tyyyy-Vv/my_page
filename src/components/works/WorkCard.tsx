@@ -25,9 +25,6 @@ const WorkCard = ({ work, index, onClick }: WorkCardProps) => {
     >
       {/* Thumbnail */}
       <div className="work-card-image-wrapper">
-        {work.featured && (
-          <div className="work-card-badge">精选</div>
-        )}
         <img
           src={work.thumbnail}
           alt={work.title}

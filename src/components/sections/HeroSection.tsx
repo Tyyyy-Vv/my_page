@@ -24,7 +24,7 @@ const HeroSection = () => {
             <div className="content-frame">
                 {/* Engineering Header */}
                 <div className="eng-header">
-                    <span className="eng-id">NO. 2024-XTY</span>
+                    <span className="eng-id">BUILD BY XTY</span>
                     <div className="eng-line"></div>
                     <span className="eng-loc">GZ, CHINA</span>
                 </div>

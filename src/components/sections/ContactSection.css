@@ -44,9 +44,12 @@
 }
 
 .contact-methods {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .contact-card {
@@ -61,6 +64,8 @@
   color: inherit;
   transition: all 0.3s ease;
   cursor: pointer;
+  flex: 0 1 auto;
+  min-width: 280px;
 }
 
 .contact-card:hover {
