@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { profile } from '@data/profile'
-import ThemeToggle from './ThemeToggle'
 import './Header.css'
 
 const Header = () => {
@@ -78,8 +77,6 @@ const Header = () => {
 
         {/* Actions */}
         <div className="header-actions">
-          <ThemeToggle />
-
           {/* Mobile Menu Button */}
           <button
             className="mobile-menu-btn"

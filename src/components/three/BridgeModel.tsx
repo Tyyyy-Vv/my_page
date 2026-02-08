@@ -14,10 +14,10 @@ const BridgeModel = () => {
     }
   })
 
-  // Bridge parameters
-  const span = 12 // Total span
-  const height = 4 // Arch height
-  const deckWidth = 2.5 // Deck width
+  // Bridge parameters - 增大尺寸以展现宏伟
+  const span = 18 // Total span (原12)
+  const height = 6 // Arch height (原4)
+  const deckWidth = 3.5 // Deck width (原2.5)
 
   // Create arch curve points
   const createArchCurve = (offset: number) => {

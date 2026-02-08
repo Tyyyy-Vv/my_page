@@ -84,8 +84,8 @@ export const profile: Profile = {
   ],
 
   contact: {
-    email: 'xiaotyou@example.com', // 替换为真实邮箱
-    // github: 'https://github.com/xiaotyou',
+    email: 'xty_811811@qq.com', // 替换为真实邮箱
+     github: 'https://github.com/Tyyyy-Vv',
     // linkedin: 'https://linkedin.com/in/xiaotyou',
     // wechat: 'xiaotyou_wechat',
   },
@@ -93,7 +93,7 @@ export const profile: Profile = {
   social: [
     // {
     //   platform: 'GitHub',
-    //   url: 'https://github.com/xiaotyou',
+    //   url: 'https://github.com/Tyyyy-Vv',
     //   icon: 'github',
     // },
     // 可以添加更多社交平台
