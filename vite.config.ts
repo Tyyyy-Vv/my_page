@@ -10,9 +10,8 @@ export default defineConfig({
     // glsl(), // 暂时禁用以排查问题
   ],
 
-  // GitHub Pages子路径（根据仓库名调整）
-  // 在GitHub Actions中自动使用子路径，本地和Netlify使用根路径
-  base: process.env.GITHUB_ACTIONS === 'true' ? '/personal_home_page/' : '/',
+  // Use relative asset paths so it works on GitHub Pages subpaths and Netlify root.
+  base: './',
 
   build: {
     // 生成source map用于调试
