@@ -49,6 +49,9 @@ export interface Work {
 }
 
 // 作品数据
+const baseUrl = import.meta.env.BASE_URL ?? '/'
+const withBase = (path: string): string => `${baseUrl}${path.replace(/^\//, '')}`
+
 export const works: Work[] = [
   {
     id: 'fuyao_bridge',
@@ -57,8 +60,8 @@ export const works: Work[] = [
     category: WorkCategory.BRIDGE,
     date: '2024-02-08',
 
-    thumbnail: '/works/fuyao_bridge/image.png',
-    images: ['/works/fuyao_bridge/image.png'],
+    thumbnail: withBase('/works/fuyao_bridge/image.png'),
+    images: [withBase('/works/fuyao_bridge/image.png')],
     // model: '/works/fuyao_bridge/model.glb', // 如果有3D模型
 
     description: '现代化双拱景观桥设计，采用流线型结构，融合力学美学与城市景观。',
