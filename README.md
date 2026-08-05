@@ -1,38 +1,38 @@
-# 肖天佑｜学术个人主页
+# Tianyou Xiao | Academic Portfolio
 
-广州大学土木与交通工程学院 2023 级本科生个人学术主页，集中展示桥梁结构健康监测、智能检测机器人、计算机视觉、智能建造与桥梁概念设计等方向的经历与成果。
+An academic portfolio for Tianyou Xiao, a Class of 2023 undergraduate at the School of Civil and Transportation Engineering, Guangzhou University. The site presents his work in bridge structural health monitoring, intelligent inspection robots, computer vision, smart construction, and conceptual bridge design.
 
-## 在线访问（无需登录）
+## Live Website — No Sign-in Required
 
-**[打开公开版个人主页](https://tianyou-xiao-academic.xty-811811.chatgpt.site)**
+**[Open the public academic portfolio](https://tianyou-xiao-academic.xty-811811.chatgpt.site)**
 
-历史站点：[查看旧版个人主页](https://xty-page.netlify.app/)
+Previous website: [View the original portfolio](https://xty-page.netlify.app/)
 
-## 主要内容
+## Featured Content
 
-- 英文学术论文与 DOI
-- 国家发明专利及公开记录
-- 桥梁健康振动感测机器人等研究实践
-- “挑战杯”与世界大学生桥梁设计大赛成果
-- 2023—2026 学术经历时间轴
-- 广州大学、赛事公示和专利数据库等公开依据
+- English-language journal publication and DOI
+- Chinese invention patents and public patent records
+- Research projects including a bridge vibration-sensing robot
+- Awards from the Challenge Cup and the World University Student Bridge Design Competition
+- Academic timeline from 2023 to 2026
+- Verifiable sources from Guangzhou University, competition announcements, and patent databases
 
-## 本地运行
+## Local Development
 
-需要 Node.js `>=22.13.0`。
+Node.js `>=22.13.0` is required.
 
 ```bash
 npm install
 npm run dev
 ```
 
-生产构建与测试：
+Build and test the production version:
 
 ```bash
 npm run build
 npm test
 ```
 
-## 版本说明
+## Version History
 
-当前 `master` 为新版学术主页。旧版网站及此前提交均完整保留在 Git 历史中，可通过仓库的 **Commits** 页面查看或恢复。
+The current `master` branch contains the updated academic portfolio. The original website and all earlier commits remain available in the repository history and can be viewed or restored from the **Commits** page.
