@@ -2,9 +2,9 @@
 
 广州大学土木与交通工程学院 2023 级本科生个人学术主页，集中展示桥梁结构健康监测、智能检测机器人、计算机视觉、智能建造与桥梁概念设计等方向的经历与成果。
 
-## 在线访问
+## 在线访问（无需登录）
 
-**[打开新版个人主页](https://tianyou-xiao-academic.xty-811811.chatgpt.site)**
+**[打开公开版个人主页](https://tianyou-xiao-academic.xty-811811.chatgpt.site)**
 
 历史站点：[查看旧版个人主页](https://xty-page.netlify.app/)
 
